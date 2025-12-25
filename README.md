@@ -1,3 +1,10 @@
+run locally: go live
+
+git management: 
+`git add .`
+`git commit -m "update"`
+`git push`
+
 # Docsify Template
 
 > A simple [Docsify](https://github.com/docsifyjs/docsify/) template for creating Markdown-based documentation sites, with no build process required.

@@ -27,7 +27,7 @@
 
 # 类型，变量和运算
 * declaration
-* <span style="color:red">字节数 P7</span>
+* <span style="color:red">**字节数 P7**</span>
   * sizeof(type)
 * 逻辑操作符：
     * 【按位 和 逻辑】
@@ -108,6 +108,7 @@
     * 空指针`nullptr`
         * `int* p = nullptr;`
         * 试图确保指针永远指向有效对象（解引用`*`有效）
+        * 解决`Null`在函数重载中的歧义：Null可以是0，也可以是指针类型
         * **使用指针，一般都先检查指针是否为空**
     * `++`用于指针：移动到下一个元素
         ```cpp

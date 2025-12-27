@@ -46,6 +46,7 @@
 
 
 # class
+* 对比struct: struct默认的成员访问权限是public，而**class默认是 private** (唯一语法区别)
 * 将类型的**接口(public)**和对应**实现(private)**分离开来
 * 构造函数：
     * 和类同同名
@@ -53,7 +54,7 @@
         ```cpp
         class Vector {
         public:
-            Vector(int s): elem(new double[s]), sz(s) {}; // 构造函数
+            Vector(int s): elem(new double[s]), sz(s) {}; // 初始化列表
             double& operator[](int i) {return elem[i];}; // 通过下标访问
             int size() { return sz; }
         private:
@@ -61,16 +62,21 @@
             int sz;
         };
         ```
-    * 构造函数 `Vector(int s): elem(new double[s]), sz(s) {};` 【初始化一步到位】
+    * **构造函数初始化列表** `Vector(int s): elem(new double[s]), sz(s) {};` 【**初始化**一步到位】
         * 冒号`:`分割构造函数和**初始化**列表
         * **构造函数成员直接初始化 `member(args)`**
-        * 相当于：
+            * 一步到位，避免了默认初始化再赋值的开销
+        * **构造函数内赋值**的版本：
             ```cpp
             Vector(int s){
                 elem = new double[s]; // 但这里是：先默认初始化elem，再赋值
                 sz = s;
             };
             ```
+        * 对于`const`和引用成员，**只能使用初始化列表进行初始化**
+           * `const`成员：只能初始化，不能赋值
+           * 引用成员：必须在初始化时绑定到某个对象
+        * **优先使用初始化列表**
 
 # enum
 * 用于枚举一系列值

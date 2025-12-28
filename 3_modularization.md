@@ -82,11 +82,10 @@
     }
     ```
 * `import`示例：
-        ```cpp
-        import Vector; // 导入vector模块：获取相关接口
-
-        // 省略
-        ```
+    ```cpp
+    import Vector; // 导入vector模块：获取相关接口
+    // 省略
+    ```
 * 旧风格的`#include`可以和`import`一起使用
 * 模块优点/区别：
     * 模块只编译一次--编译速度快

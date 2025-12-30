@@ -2,3 +2,4 @@
 - [User-defined Types](2_UDT.md)
 - [Modularization](3_modularization.md)
 - [Error Handling](4_error_handling.md)
+- [Class](5_class.md)

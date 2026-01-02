@@ -3,3 +3,4 @@
 - [Modularization](3_modularization.md)
 - [Error Handling](4_error_handling.md)
 - [Class](5_class.md)
+- [Basic Operations](6_basic_op.md)
